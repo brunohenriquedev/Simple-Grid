@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {Container, Row, Column} from "./components/Grid/index";
 
-function App() {
+class App extends Component {
+  render() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Column color='#FFF' backgroundColor='#0095ff' mobile='6' tablet='12' desktop='6'>1 <div>mobile 6 tablet 12 desktop 6</div></Column>
+        <Column color='#FFF' backgroundColor='#8844ee' mobile='6' tablet='6' desktop='6'>2 <div>mobile 6 tablet 6 desktop 6</div></Column>
+        <Column color='#FFF' backgroundColor='tomato' mobile='12' tablet='6' desktop='12'>3 <div>mobile 12 tablet 6 desktop 12</div></Column>
+      </Row>
+      <Row>
+        <Column color='#FFF' backgroundColor='#8844ee' mobile='6' tablet='6' desktop='6'>4 <div>mobile 6 tablet 6 desktop 6</div></Column>
+        <Column color='#FFF' backgroundColor='tomato' mobile='12' tablet='6' desktop='12'>5 <div>mobile 12 tablet 6 desktop 12</div></Column>
+        <Column color='#FFF' backgroundColor='#0095ff' mobile='6' tablet='12' desktop='6'>6 <div>mobile 6 tablet 12 desktop 6</div></Column>
+      </Row>
+      <Row>
+        <Column color='#FFF' backgroundColor='tomato' mobile='12' tablet='6' desktop='12'>7 <div>mobile 12 tablet 6 desktop 12</div></Column>
+        <Column color='#FFF' backgroundColor='#0095ff' mobile='6' tablet='12' desktop='6'>8 <div>mobile 6 tablet 12 desktop 6</div></Column>
+        <Column color='#FFF' backgroundColor='#8844ee' mobile='6' tablet='6' desktop='6'>9 <div>mobile 6 tablet 6 desktop 6</div></Column>
+      </Row>
+    </Container>
   );
+  }
 }
 
 export default App;
